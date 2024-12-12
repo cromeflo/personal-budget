@@ -4,21 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>personal-budget</title>
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./css/styles.css">
     </head>
     <body>
         <main>
             <h2>Mi Presupuesto Personal</h2>
             <section id="nueva-transaccion">
+                <h3>Balance Total</h3>
+                <span id="balance-total">0.0</span>
+            </section>
+            <section id="nueva-transaccion">
                 <h3>Nueva Transacción</h3>
                 <form id="transaccion-form">
-                    <label for="monto">Monto ($):</label>
-                    <input type="number" id="monto" required>
-                    <label for="tipo">Tipo:</label>
-                    <select id="tipo">
-                        <option value="Ingreso">Ingreso</option>
-                        <option value="Gasto">Gasto</option>
-                    </select>
+                    <div>
+                        <label for="monto">Monto ($):</label>
+                        <input type="number" id="monto" min="0" step="0.01" required>
+                        <span class="error-message" id="montoError"></span>
+                    </div>
+                    <div>
+                        <label for="tipo">Tipo:</label>
+                        <select id="tipo" required>
+                            <option value="Ingreso">Ingreso</option>
+                            <option value="Gasto">Gasto</option>
+                        </select>
+                    </div>
                     <button type="submit" id="agregar-transaccion">Agregar Transacción</button>
                 </form>
             </section>
@@ -26,17 +35,20 @@
                 <h3>Historial de Transacciones</h3>
                 <button id="ordenar-monto">Ordenar por Monto</button>
                 <table>
-                    <!-- <thead>
+                    <thead>
                         <tr>
-                        <th>Tipo</th>
-                        <th>Monto ($)</th>
+                            <th>Fecha</th>
+                            <th>Tipo Operacion</th>
+                            <th>Monto</th>
                         </tr>
-                    </thead> -->
+                    </thead>
                     <tbody id="transacciones-body">
                     </tbody>
                 </table>
             </section>
         </main>
-        <script src="./app.js"></script>
+        <script src="./js/validators.js"></script>
+        <script src="./js/util.js"></script>
+        <script src="./js/app.js"></script>
     </body>
 </html>
