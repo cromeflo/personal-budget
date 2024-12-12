@@ -1,0 +1,111 @@
+:root {
+    --font-family: Arial, sans-serif;
+    --margin-body: 20px;
+    --padding-body: 0;
+    --background-body: lightgrey;
+    --max-width-section: 600px;
+    --background-section: #fff;
+    --padding-section: 10px;
+    --border-radius-section: 8px;
+    --box-shadow-section: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --margin-bottom-section: 10px;
+    --font-size-input: 16px;
+    --padding-input: 5px;
+    --border-input: 1px solid #ccc;
+    --border-radius-input: 4px;
+    --margin-bottom-input: 10px;
+    --button-background: #28a745;
+    --button-hover-background: #218838;
+    --button-color: white;
+    --table-border: 1px solid #ddd;
+    --income-color: blue;
+    --expense-color: red;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: var(--margin-body);
+    padding: var(--padding-body);
+    background-color: var(--background-body);
+}
+
+section {
+    max-width: var(--max-width-section);
+    margin: 0 auto;
+    background: var(--background-section);
+    padding: var(--padding-section);
+    border-radius: var(--border-radius-section);
+    box-shadow: var(--box-shadow-section);
+    margin-bottom: var(--margin-bottom-section);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: calc(var(--margin-bottom-section)*2);
+}
+
+h3 {
+    margin-bottom: var(--margin-bottom-section);
+}
+
+form, table, select, button {
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: calc(var(--margin-bottom-section)/2);
+}
+
+input, select, button {
+    font-size: var(--font-size-input);
+    padding: var(--padding-input);
+    border: var(--border-input);
+    border-radius: var(--border-radius-input);
+    margin-bottom: var(--margin-bottom-input);
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+button {
+    background-color: var(--button-background);
+    color: var(--button-color);
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-input);
+}
+
+button:hover {
+    background-color: var(--button-hover-background);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+    padding: var(--padding-section);
+    border: var(--table-border);
+}
+
+tbody tr td:nth-child(2) {
+    text-align: center;
+}
+
+tbody tr td:nth-child(3) {
+    text-align: right;
+}
+
+.income {
+    color: var(--income-color);
+}
+
+.expense {
+    color: var(--expense-color);
+}
