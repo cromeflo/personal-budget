@@ -21,14 +21,12 @@
     --income-color: blue;
     --expense-color: red;
 }
-
 body {
     font-family: var(--font-family);
     margin: var(--margin-body);
     padding: var(--padding-body);
     background-color: var(--background-body);
 }
-
 section {
     max-width: var(--max-width-section);
     margin: 0 auto;
@@ -38,25 +36,20 @@ section {
     box-shadow: var(--box-shadow-section);
     margin-bottom: var(--margin-bottom-section);
 }
-
 h2 {
     text-align: center;
     margin-bottom: calc(var(--margin-bottom-section)*2);
 }
-
 h3 {
     margin-bottom: var(--margin-bottom-section);
 }
-
 form, table, select, button {
     width: 100%;
 }
-
 label {
     display: block;
     margin-bottom: calc(var(--margin-bottom-section)/2);
 }
-
 input, select, button {
     font-size: var(--font-size-input);
     padding: var(--padding-input);
@@ -64,13 +57,11 @@ input, select, button {
     border-radius: var(--border-radius-input);
     margin-bottom: var(--margin-bottom-input);
 }
-
 div {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-
 button {
     background-color: var(--button-background);
     color: var(--button-color);
@@ -78,34 +69,45 @@ button {
     cursor: pointer;
     font-size: var(--font-size-input);
 }
-
 button:hover {
     background-color: var(--button-hover-background);
 }
-
 table {
     width: 100%;
     border-collapse: collapse;
 }
-
 th, td {
     text-align: center;
     padding: var(--padding-section);
     border: var(--table-border);
 }
-
 tbody tr td:nth-child(2) {
     text-align: center;
 }
-
 tbody tr td:nth-child(3) {
     text-align: right;
 }
-
+/* estilo adicional agregado en clase */
 .income {
     color: var(--income-color);
 }
-
 .expense {
     color: var(--expense-color);
+}
+.error-message{
+    color: var(--expense-color);
+    font-size: xx-small;
+}
+/* Logros adicionales del Lab 06 */
+.low-balance {
+    color: red;
+    font-weight: bold;
+}
+.regular-balance {
+    color: orange;
+    font-weight: bold;
+}
+.extra-balance {
+    color: green;
+    font-weight: bold;
 }

@@ -14,3 +14,13 @@ function validarTipo(tipo){
         return false;
     }
 }
+//
+// Validación para el primer monto
+function validarSiHaySaldo(tipo, monto, saldo){
+    if ((monto > saldo) && tipo === "Gasto") {
+        montoError.textContent = "Saldo insuficiente";
+        return false;
+    }else{
+        return true;
+    }
+}

@@ -24,3 +24,18 @@ function formatearFecha(timestamp) {
     const anio = fecha.getFullYear();
     return `${dia}-${mes}-${anio}`;
 }
+
+function getBalanceClass(monto) {
+    const balanceElement = document.getElementById('balance-total');
+    const balance = parseFloat(monto);
+    /* Limipiar las clases previamente asignadas */
+    balanceElement.classList.remove('low-balance', 'regular-balance', 'extra-balance');
+    /* Evaluamos en base a los parámetros indicados en el Lab 6 y usando la propiedad classList */
+    if (balance <= 500) {
+        balanceElement.classList.add('low-balance');
+    } else if (balance <= 1000) {
+        balanceElement.classList.add('regular-balance');
+    } else {
+        balanceElement.classList.add('extra-balance');
+    }
+}
